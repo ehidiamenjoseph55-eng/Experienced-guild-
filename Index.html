@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXPERIENCED | Guild Tournaments</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090d18;color:#fff;font-family:Arial,sans-serif}
+header{padding:25px 16px;text-align:center;background:linear-gradient(135deg,#101b35,#172b50);border-bottom:2px solid #f5b942}
+.logo{font-size:28px;font-weight:900;color:#f5b942;letter-spacing:2px}
+header p{color:#d0d7e8}
+nav{display:flex;justify-content:center;gap:20px;padding:14px;background:#111827;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-weight:bold}
+main{max-width:650px;margin:auto;padding:20px}
+.card{background:#131b2c;border:1px solid #29364f;border-radius:14px;padding:20px;margin:18px 0}
+h2{color:#f5b942}
+input,select,button{width:100%;padding:13px;margin:8px 0;border-radius:8px;border:1px solid #39465e;font-size:16px}
+input,select{background:#0b1220;color:white}
+button{background:#f5b942;color:#101522;font-weight:bold;border:0;cursor:pointer}
+.note{color:#aab6cb;font-size:13px}
+#status{overflow-wrap:anywhere}
+footer{text-align:center;padding:25px;color:#aab6cb}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">⚔ EXPERIENCED ⚔</div>
+<p>Guild Tournament Headquarters</p>
+</header>
+<nav>
+<a href="#home">Home</a>
+<a href="#tournament">Tournament</a>
+<a href="#register">Register</a>
+</nav>
+<main>
+<section class="card" id="home">
+<h2>Welcome to EXPERIENCED</h2>
+<p>A community built on skill, teamwork and respect.</p>
+<p><strong>Guild motto:</strong> One Legion. One Mission. One Victory.</p>
+</section>
+<section class="card" id="tournament">
+<h2>🏆 Guild Tournament</h2>
+<p>Gather your squad and prepare to compete!</p>
+<p><strong>Day:</strong> Saturday</p>
+<p><strong>Time:</strong> 10:30 PM</p>
+<p class="note">Tournament date, rules and prizes will be announced by the guild leadership.</p>
+</section>
+<section class="card" id="register">
+<h2>📝 Tournament Registration</h2>
+<form id="registrationForm">
+<input name="player_name" placeholder="Free Fire name" required>
+<input name="player_uid" placeholder="Free Fire UID" required>
+<input name="whatsapp" placeholder="WhatsApp contact (optional)">
+<select name="team_size" required>
+<option value="">Select team size</option>
+<option value="Solo">Solo</option>
+<option value="Duo">Duo</option>
+<option value="Squad">Squad</option>
+</select>
+<button type="submit">Submit Registration</button>
+</form>
+<p id="status" class="note">Registration will work after the database is connected.</p>
+</section>
+</main>
+<footer>© EXPERIENCED Guild · Play with skill. Win with honour.</footer>
+<script>
+document.getElementById('registrationForm').addEventListener('submit',function(e){
+e.preventDefault();
+document.getElementById('status').textContent='The website design is ready, but registration is not connected yet. Please wait for the next setup step.';
+});
+</script>
+</body>
+  </html>
